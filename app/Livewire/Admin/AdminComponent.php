@@ -5,8 +5,10 @@ use Livewire\Component;
 use App\Livewire\Directory\{
     StudentComponent As DirectoryStudentComponent,
     CertifiedComponent As DirectoryCertifiedComponent,
+    
     HomeComponent As DirectoryHomeComponent
 };
+use Illuminate\Support\Facades\Auth;
 use App\Livewire\Directory\Component\{SchoolComponent As SchoolHomeComponent};
 use App\Models\{User};
 use Jantinnerezo\LivewireAlert\LivewireAlert;

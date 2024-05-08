@@ -94,9 +94,9 @@ aria-hidden="true">
                             <label for="">Nacionalidade</label>
                             <select required wire:model='studentnationality' class="form-control">
                                 <option>-Selecionar--</option>
-                                <option value="Angolano">Angolano</option>                            
-                                <option value="Portugês">Portugês</option>                            
-                                <option value="Brasileiro">Brasileiro</option>                            
+                                <option value="Angolana">Angolana</option>                            
+                                <option value="Portugesa">Portugesa</option>                            
+                                <option value="Brasileira">Brasileira</option>                            
                             </select>
                             @error('studentnationality') <span class="text-danger">{{$message}}</span>@enderror
                         </div>

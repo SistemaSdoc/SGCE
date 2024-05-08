@@ -15,7 +15,7 @@ class CertifiedComponent extends Component
 
     public function render()
     {
-        return view('livewire.directory.certified.certified-component',[
+        return view('livewire.directory.certified.home-component',[
             'listofstudents' =>$this->getStudents(),
             'allcourses' => $this->getCourses(),
         ])->layout('layouts.directory.app');

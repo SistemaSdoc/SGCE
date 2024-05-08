@@ -3,6 +3,7 @@
 namespace App\Livewire\Directory;
 use Livewire\Component;
 use App\Models\{Note,Course,Certified};
+use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class NotesComponent extends Component
@@ -177,6 +178,7 @@ class NotesComponent extends Component
                    
                     }                   
                 }
+
 
                   //Store on certificates table
                   $detailsAboutstudent = Note::where('id',$id)->first();                                       

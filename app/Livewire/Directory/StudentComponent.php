@@ -3,7 +3,7 @@
 namespace App\Livewire\Directory;
 
 use Livewire\Component;
-use App\Models\{Student,School,Course};
+use App\Models\{Student,School,Course, CourseDiscipline, Note};
 
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 class StudentComponent extends Component
@@ -57,8 +57,8 @@ class StudentComponent extends Component
                 ->join("schools", "students.school_id","=","schools.id")
                 ->where("students.name","like","%".$this->searchStudent."%")
                 ->get(["students.*" ,"students.id As id_student", "schools.schoolname","courses.coursename"]);
+            }
       
-             }
         } catch (\Throwable $th) {  
             $this->alert('error', 'ERRO', [
                 'toast'=>false,
