@@ -26,7 +26,6 @@ class HomeComponent extends Component
 
         try{
             $user = User::where('email', $this->email)->first();
-
             if (!$user){
                 $this->alert('error', 'ERRO', [
                     'toast'=>false,
@@ -35,8 +34,7 @@ class HomeComponent extends Component
                     'confirmButtonText' => 'OK',
                     'text'=>'Não existe uma conta com este e-mail!!!'
                 ]);
-
-                return;
+              
             }else{
                  if(Auth::attempt(['email' => $this->email, 'password' => $this->password])){
                      if (auth()->user()->profile == 'directory'){
@@ -57,8 +55,8 @@ class HomeComponent extends Component
                     }
             }
 
-        }catch(\Exception $th){
-            dd($th->GetMessage());
+        }catch(\Throwable $th){
+        
             $this->alert('error', 'ERRO', [
                 'toast'=>false,
                 'position'=>'center',
