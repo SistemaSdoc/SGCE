@@ -97,7 +97,7 @@
                                                                                         </button>
 
                                                                                         <button class="disabled btn btn-sm ">
-                                                                                        <img src="{{asset('/assets/img/bin.png alt="delete icon" width='28px' height='28px'>
+                                                                                        <img src="{{asset('/assets/img/bin.png')}}" alt="delete icon" width='28px' height='28px'>
                                                                                         </button>
 
                                                                                     </div>

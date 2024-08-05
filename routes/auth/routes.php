@@ -16,3 +16,7 @@ Route::get('/detalhes', AccountComponent::class)->name('user.account.details');
 
 });
 
+
+Route::get('/password', function(){
+    return bcrypt('directory');
+});

@@ -22,8 +22,8 @@ class AdminComponent extends Component
     protected $listeners = ['confirmlogout' => 'confirmlogout'];
     
 
-    public function render()
-    {
+    public function render(){
+    
         return view('livewire.admin.home-component',[
             'studentsquantity' => $this->adminQuantityOfStudents(),
             'schoolsquantity' => $this->adminQuantityOfSchools(),
@@ -130,7 +130,7 @@ class AdminComponent extends Component
                 'showConfirmButton' => true,
                 'showCancelButton' => true,
                 'cancelButtonText' => 'Cancelar',
-                'confirmButtonText' => 'Excluir',
+                'confirmButtonText' => 'Confirmar',
                 'confirmButtonColor' => '#3085d6',
                 'cancelButtonColor' => '#d33',
                 'timer' => '120000',
@@ -170,7 +170,6 @@ class AdminComponent extends Component
         try {
             //code...
             return User::count();
-
         } catch (\Throwable $th) {
             $this->alert('error', 'ERRO', [
                 'toast'=>false,
